@@ -1,4 +1,4 @@
-project(gameclient.genplus)
+project(game.libretro.genplus)
 
 cmake_minimum_required(VERSION 2.6)
 
@@ -6,10 +6,9 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 
 enable_language(CXX)
 
-find_package(xbmc REQUIRED)
+find_package(kodi REQUIRED)
 
 include(ExternalProject)
-
 externalproject_add(genplus
                     GIT_REPOSITORY https://github.com/libretro/Genesis-Plus-GX
                     GIT_TAG d973d7d
@@ -20,7 +19,9 @@ externalproject_add(genplus
                     BUILD_IN_SOURCE 1)
 
 set(GENPLUS_CUSTOM_BINARY ${PROJECT_BINARY_DIR}/genplus/src/genplus/genesis_plus_gx_libretro${CMAKE_SHARED_LIBRARY_SUFFIX}
-                        genesis_plus_gx_libretro${CMAKE_SHARED_LIBRARY_SUFFIX} genplus)
+                          game.libretro.genplus${CMAKE_SHARED_LIBRARY_SUFFIX} genplus)
 
-build_addon(gameclient.genplus GENPLUS DEPLIBS)
-add_dependencies(gameclient.genplus genplus)
+build_addon(game.libretro.genplus GENPLUS DEPLIBS)
+add_dependencies(game.libretro.genplus genplus)
+
+include(CPack)

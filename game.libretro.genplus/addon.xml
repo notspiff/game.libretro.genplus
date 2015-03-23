@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="gameclient.genplus"
+<addon id="game.libretro.genplus"
 		name="Genesis Plus GX"
 		version="1.7.4"
 		provider-name="Libretro">
 	<requires>
-		<import addon="xbmc.libretro" version="1.0.0"/>
+		<import addon="game.libretro" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.gameclient"
-			library_android=""
-			library_linux="genesis_plus_gx_libretro.so"
-			library_osx=""
-			library_windx=""
-			library_wingl="">
+	<extension point="kodi.gameclient"
+			library_android="libgame.libretro.genplus.so"
+			library_linux="game.libretro.genplus.so"
+			library_osx="game.libretro.genplus.dylib"
+			library_windx="game.libretro.genplus.dll"
+			library_wingl="game.libretro.genplus.dll">
 		<platforms>Genesis|Game Gear|SEGA Master System</platforms>
 		<extensions>md|smd|bin|cue|gen|iso|sms|gg|sg</extensions>
 		<allowvfs>false</allowvfs>
@@ -24,8 +24,6 @@
 Supported files: .md, .smd, .bin, .cue, .gen, .iso, .sms, .gg, .sg
 
 Source: https://github.com/libretro/Genesis-Plus-GX</description>
-		<platform>linux</platform>
-		<nofanart>true</nofanart>
-		
+		<platform>all</platform>
 	</extension>
 </addon>
