@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.genplus"
-		name="Genesis Plus GX"
+		name="Sega Genesis (Genesis Plus GX)"
 		version="1.7.4"
 		provider-name="Libretro">
 	<requires>
