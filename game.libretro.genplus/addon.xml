@@ -14,7 +14,7 @@
 			library_windx="game.libretro.genplus.dll"
 			library_wingl="game.libretro.genplus.dll">
 		<platforms>Genesis|Game Gear|SEGA Master System</platforms>
-		<extensions>md|smd|bin|cue|gen|iso|sms|gg|sg</extensions>
+		<extensions>mdx|md|smd|gen|bin|cue|iso|sms|gg|sg</extensions>
 		<supports_vfs>false</supports_vfs>
 		<supports_no_game>false</supports_no_game>
 	</extension>
@@ -22,7 +22,7 @@
 		<summary lang="en">Genesis Plus GX v1.7.4</summary>
 		<description>An enhanced port of Genesis Plus to the libretro API. Support for SG-1000, Mark-III, Master System, Game Gear, Mega Drive &amp; Mega CD hardware.
 
-Supported files: .md, .smd, .bin, .cue, .gen, .iso, .sms, .gg, .sg
+Supported files: .mdx, .md, .smd, .gen, .bin, .cue, .iso, .sms, .gg, .sg
 
 Special thanks to: twinaphex for backporting enhancements from the GX version (Gamecube/Wii port).
 
