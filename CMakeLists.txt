@@ -7,7 +7,7 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
-find_package(genplus REQUIRED)
+find_package(libretro-genplus REQUIRED)
 
 set(DEPLIBS genplus)
 set(GENPLUS_CUSTOM_BINARY ${GENPLUS_LIB}
