@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30000">
+		<setting label="30001" type="labelenum" id="genesis_plus_gx_system_hw" values="auto|sg-1000|sg-1000 II|mark-III|master system|master system II|game gear|mega drive / genesis" default="auto"/>
+		<setting label="30002" type="labelenum" id="genesis_plus_gx_region_detect" values="auto|ntsc-u|pal|ntsc-j" default="auto"/>
+		<setting label="30003" type="labelenum" id="genesis_plus_gx_force_dtack" values="enabled|disabled" default="enabled"/>
+		<setting label="30004" type="labelenum" id="genesis_plus_gx_bios" values="enabled|disabled" default="disabled"/>
+		<setting label="30005" type="labelenum" id="genesis_plus_gx_addr_error" values="enabled|disabled" default="enabled"/>
+		<setting label="30006" type="labelenum" id="genesis_plus_gx_lock_on" values="disabled|game genie|action replay (pro)|sonic & knuckles" default="disabled"/>
+		<setting label="30007" type="labelenum" id="genesis_plus_gx_ym2413" values="auto|enabled|disabled" default="auto"/>
+		<setting label="30008" type="labelenum" id="genesis_plus_gx_dac_bits" values="enabled|disabled" default="disabled"/>
+		<setting label="30009" type="labelenum" id="genesis_plus_gx_blargg_ntsc_filter" values="disabled|monochrome|composite|svideo|rgb" default="disabled"/>
+		<setting label="30010" type="labelenum" id="genesis_plus_gx_lcd_filter" values="enabled|disabled" default="disabled"/>
+		<setting label="30011" type="labelenum" id="genesis_plus_gx_overscan" values="disabled|top/bottom|left/right|full" default="disabled"/>
+		<setting label="30012" type="labelenum" id="genesis_plus_gx_gg_extra" values="enabled|disabled" default="disabled"/>
+		<setting label="30013" type="labelenum" id="genesis_plus_gx_render" values="single field|double field" default="single field"/>
+		<setting label="30014" type="labelenum" id="genesis_plus_gx_gun_cursor" values="yes|no" default="no"/>
+		<setting label="30015" type="labelenum" id="genesis_plus_gx_invert_mouse" values="yes|no" default="no"/>
+	</category>
+</settings>
