@@ -12,7 +12,8 @@
 		<platforms>Genesis|Game Gear|SEGA Master System</platforms>
 		<extensions>mdx|md|smd|gen|bin|cue|iso|sms|gg|sg</extensions>
 		<supports_vfs>false</supports_vfs>
-		<supports_no_game>false</supports_no_game>
+		<supports_standalone>false</supports_standalone>
+		<supports_keyboard>false</supports_keyboard>
 	</extension>
 		<extension point="xbmc.addon.metadata">
 		<summary lang="en">Genesis Plus GX v1.7.4</summary>
@@ -20,10 +21,9 @@
 
 Supported files: .mdx, .md, .smd, .gen, .bin, .cue, .iso, .sms, .gg, .sg
 
-Special thanks to: twinaphex for backporting enhancements from the GX version (Gamecube/Wii port).
-
-License: Modified BSD / LGPL v2.1</description>
+Special thanks to: twinaphex for backporting enhancements from the GX version (Gamecube/Wii port).</description>
 		<platform>@PLATFORM@</platform>
+		<license>Modified BSD / LGPL v2.1</license>
 		<nofanart>true</nofanart>
 	</extension>
 </addon>
