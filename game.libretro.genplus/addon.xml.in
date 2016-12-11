@@ -18,12 +18,12 @@
 		<supports_mouse>false</supports_mouse>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Sega MS/GG/MD/CD (Genesis Plus GX) v1.7.4</summary>
+		<summary lang="en">Sega MS/GG/MD/CD (Genesis Plus GX) v1.7.4 2205e16</summary>
 		<description>An enhanced port of Genesis Plus to the libretro API. Support for SG-1000, Mark-III, Master System, Game Gear, Mega Drive &amp; Mega CD hardware.
 
-Supported files: .mdx, .md, .smd, .gen, .bin, .cue, .iso, .sms, .gg, .sg
+Special thanks to: twinaphex for backporting enhancements from the GX version (Gamecube/Wii port).
 
-Special thanks to: twinaphex for backporting enhancements from the GX version (Gamecube/Wii port).</description>
+Supported files: .mdx, .md, .smd, .gen, .bin, .cue, .iso, .sms, .gg, .sg</description>
 		<license>Non-commercial</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
