@@ -1,18 +1,18 @@
-From 5ba03fcdce88f9289bf9551d578bef311f717783 Mon Sep 17 00:00:00 2001
+From ad16f795bb4fe3d45b68121c02ad9c3e845b13dc Mon Sep 17 00:00:00 2001
 From: Garrett Brown <themagnificentmrb@gmail.com>
 Date: Sat, 1 Oct 2016 22:54:49 -0700
 Subject: [PATCH] Add ability to load resources from multiple directories
 
 ---
- libretro/libretro.c | 64 +++++++++++++++++++++++++++++++----------------------
+ libretro/libretro.c | 65 +++++++++++++++++++++++++++++++----------------------
  libretro/libretro.h | 13 +++++++++++
- 2 files changed, 51 insertions(+), 26 deletions(-)
+ 2 files changed, 51 insertions(+), 27 deletions(-)
 
 diff --git a/libretro/libretro.c b/libretro/libretro.c
-index 09a941c..b1379c9 100644
+index 86cca13..027e12a 100644
 --- a/libretro/libretro.c
 +++ b/libretro/libretro.c
-@@ -86,6 +86,12 @@ static retro_audio_sample_batch_t audio_cb;
+@@ -127,6 +127,12 @@ static retro_audio_sample_batch_t audio_cb;
  /* Cheat Support */
  #define MAX_CHEATS (150)
  
@@ -25,7 +25,7 @@ index 09a941c..b1379c9 100644
  typedef struct
  {
   bool enable;
-@@ -1879,26 +1885,31 @@ void retro_cheat_set(unsigned index, bool enabled, const char *code)
+@@ -1923,16 +1929,27 @@ void retro_cheat_set(unsigned index, bool enabled, const char *code)
     apply_cheats();
  }
  
@@ -50,13 +50,17 @@ index 09a941c..b1379c9 100644
  bool retro_load_game(const struct retro_game_info *info)
  {
     int i;
--   const char *dir;
+-   const char *dir = NULL;
 -#if defined(_WIN32)
--   char slash = '\\';
+-   char slash      = '\\';
 -#else
--   char slash = '/';
+-   char slash      = '/';
 -#endif
+-
+    if (!info)
+       return false;
  
+@@ -1952,13 +1969,6 @@ bool retro_load_game(const struct retro_game_info *info)
     extract_directory(g_rom_dir, info->path, sizeof(g_rom_dir));
     extract_name(g_rom_name, info->path, sizeof(g_rom_name));
  
@@ -70,7 +74,7 @@ index 09a941c..b1379c9 100644
     if (!environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &save_dir) || !save_dir)
     {
        if (log_cb)
-@@ -1906,19 +1917,20 @@ bool retro_load_game(const struct retro_game_info *info)
+@@ -1966,19 +1976,20 @@ bool retro_load_game(const struct retro_game_info *info)
        save_dir = g_rom_dir;
     }
  
@@ -105,12 +109,12 @@ index 09a941c..b1379c9 100644
     check_variables();
  
 diff --git a/libretro/libretro.h b/libretro/libretro.h
-index 16c274a..2ab79e5 100755
+index 2579e8b..ea423c2 100755
 --- a/libretro/libretro.h
 +++ b/libretro/libretro.h
-@@ -852,6 +852,19 @@ enum retro_mod
-                                             * It can be used by the core for localization purposes.
+@@ -1007,6 +1007,19 @@ struct retro_hw_render_context_negotiation_interface
                                              */
+ 
  
 +struct retro_resource
 +{
@@ -129,5 +133,5 @@ index 16c274a..2ab79e5 100755
  #define RETRO_MEMDESC_BIGENDIAN (1 << 1)   /* The memory area contains big endian data. Default is little endian. */
  #define RETRO_MEMDESC_ALIGN_2   (1 << 16)  /* All memory access in this area is aligned to their own size, or 2, whichever is smaller. */
 -- 
-2.7.4
+2.11.0
 
