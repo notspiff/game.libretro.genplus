@@ -9,8 +9,8 @@
 		<setting label="30006" type="select" id="genesis_plus_gx_dac_bits" values="disabled|enabled" default="disabled"/>
 		<setting label="30007" type="select" id="genesis_plus_gx_force_dtack" values="enabled|disabled" default="enabled"/>
 		<setting label="30008" type="select" id="genesis_plus_gx_gg_extra" values="disabled|enabled" default="disabled"/>
-		<setting label="30009" type="select" id="genesis_plus_gx_gun_cursor" values="no|yes" default="no"/>
-		<setting label="30010" type="select" id="genesis_plus_gx_invert_mouse" values="no|yes" default="no"/>
+		<setting label="30009" type="select" id="genesis_plus_gx_gun_cursor" values="disabled|enabled" default="disabled"/>
+		<setting label="30010" type="select" id="genesis_plus_gx_invert_mouse" values="disabled|enabled" default="disabled"/>
 		<setting label="30011" type="select" id="genesis_plus_gx_lcd_filter" values="disabled|enabled" default="disabled"/>
 		<setting label="30012" type="select" id="genesis_plus_gx_lock_on" values="disabled|game genie|action replay (pro)|sonic &amp; knuckles" default="disabled"/>
 		<setting label="30013" type="select" id="genesis_plus_gx_overscan" values="disabled|top/bottom|left/right|full" default="disabled"/>
